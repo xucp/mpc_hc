@@ -1,0 +1,12 @@
+prefix=
+exec_prefix=
+libdir=${pcfiledir}/../../../libavformat
+includedir=/f/mpc_hc/src/thirdparty/LAVFilters/src/ffmpeg
+
+Name: libavformat
+Description: FFmpeg container format library
+Version: 57.14.100
+Requires: libavcodec-lav >= 57.15.100, libavresample-lav >= 3.0.0, libavutil-lav >= 55.6.100
+Conflicts:
+Libs: -L${libdir} -Wl,-rpath,${libdir} -lavformat-lav 
+Cflags: -I${includedir}

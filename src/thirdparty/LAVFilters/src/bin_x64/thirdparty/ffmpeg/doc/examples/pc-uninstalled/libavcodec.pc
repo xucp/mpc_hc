@@ -1,0 +1,12 @@
+prefix=
+exec_prefix=
+libdir=${pcfiledir}/../../../libavcodec
+includedir=/f/mpc_hc/src/thirdparty/LAVFilters/src/ffmpeg
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 57.15.100
+Requires: libavresample-lav >= 3.0.0, libavutil-lav >= 55.6.100
+Conflicts:
+Libs: -L${libdir} -Wl,-rpath,${libdir} -lavcodec-lav 
+Cflags: -I${includedir}

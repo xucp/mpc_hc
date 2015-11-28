@@ -1,0 +1,12 @@
+prefix=
+exec_prefix=
+libdir=${pcfiledir}/../../../libavresample
+includedir=/f/mpc_hc/src/thirdparty/LAVFilters/src/ffmpeg
+
+Name: libavresample
+Description: Libav audio resampling library
+Version: 3.0.0
+Requires: libavutil-lav >= 55.6.100
+Conflicts:
+Libs: -L${libdir} -Wl,-rpath,${libdir} -lavresample-lav 
+Cflags: -I${includedir}
